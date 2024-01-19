@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <title>Formulario trabalho2</title>
+   </head>
+   <body>
+      <header>
+         <h1>Clínica ABC Health</h1>
+      </header>
+      <nav>
+         <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+         </ul>
+      </nav>
+      <main>
+         <form action="cadastraCliente.php" method="post"
+            enctype="multipart/form-data">
+            <fieldset>
+               <legend>
+                  <h2>Dados Pessoais</h2>
+               </legend>
+               <div>
+                  <label for="nome">Nome:</label>
+                  <input type="text" name="nomeDadosPessoais" id="nome"
+                     minlength="2" maxlength="50" autofocus
+                     placeholder="Informe seu nome completo"
+                     required>
+               </div>
+               <div>
+                  <label for="email">E-mail:</label>
+                  <input type="email" name="emailDadosPessoais"
+                     id="email"
+                     required>
+               </div>
+               <div>
+                  <label for="cpf">CPF:</label>
+                  <input type="text" name="cpfDadosPessoais" id="cpf"
+                     pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                     required>
+               </div>
+               <div>
+                  <label for="idade">Idade:</label>
+                  <input type="number" name="idadeDadosPessoais"
+                     id="idade"
+                     required>
+               </div>
+               <div>
+                  <label for="telefone">Telefone:</label>
+                  <input type="tel" name="telefoneDadosPessoais"
+                     id="telefone"
+                     required>
+               </div>
+               <div>
+                  <label for="dataNascimeto">Data de Nascimento:</label>
+                  <input type="date" name="dataNascimetoDadosPessoais"
+                     id="dataNascimeto">
+               </div>
+               <fieldset>
+                  <legend>Sexo</legend>
+                  <div>
+                     <input type="radio" name="sexoDadosPessoais"
+                        id="feminino" value="feminino">
+                     <label for="feminino">Feminino</label>
+                  </div>
+                  <div>
+                     <input type="radio" name="sexoDadosPessoais"
+                        id="masculino" value="masculino">
+                     <label for="masculino">Masculino</label>
+                  </div>
+                  <div>
+                     <input type="radio" name="sexoDadosPessoais"
+                        id="outro" value="outro">
+                     <label for="outro">Outro</label>
+                  </div>
+               </fieldset>
+               <div>
+                  <label for="estadoCivil">Estado civil:</label>
+                  <input type="text" name="estadoCivilDadosPessoais"
+                     id="estadoCivil">
+               </div>
+               <div>
+                  <label for="extra">Aviso:</label>
+                  <input type="text" name="extraDadosPessoais" id="extra"
+                     readonly
+                     value="Estas informações são privadas e não serão compartilhadas">
+               </div>
+            </fieldset>
+            <fieldset>
+               <legend>
+                  <h2>Endereço de Entrega</h2>
+               </legend>
+               <div>
+                  <label for="cep">CEP:</label>
+                  <input type="text" name="cepEnderecoEntrega" id="cep"
+                     required>
+               </div>
+               <div>
+                  <label for="logradouro">Tipo de Logradouro:</label>
+                  <select name="tipoLogEnderecoEntrega" id="logradouro"
+                     required>
+                     <option value="" selected>Selecione</option>
+                     <option value="rua">Rua</option>
+                     <option value="av">Avenida</option>
+                     <option value="al">Alameda/option>
+                        <option value="pr">Praça</option>
+                        <option value="OUTROS">Outros</option>
+                     </select>
+                  </div>
+                  <div>
+                     <label for="nomelogradouro">Logradouro:</label>
+                     <input type="text" name="logradouroEnderecoEntrega"
+                        id="nomelogradouro"
+                        required>
+                  </div>
+                  <div>
+                     <label for="bairro">Bairro:</label>
+                     <input type="text" name="bairroEnderecoEntrega"
+                        id="bairro"
+                        required>
+                  </div>
+                  <div>
+                     <label for="cidade">Cidade:</label>
+                     <input type="text" name="cidadeEnderecoEntrega"
+                        id="cidade"
+                        required>
+                  </div>
+                  <div>
+                     <label for="estado">Estado:</label>
+                     <select name="estadoEnderecoEntrega" id="estado"
+                        required>
+                        <option value="" selected>Selecione</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="OUTROS">Outros</option>
+                     </select>
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>
+                     <h2>Informações Adicionais</h2>
+                  </legend>
+                  <fieldset>
+                     <legend>Interesses</legend>
+                     <div>
+                        <input type="checkbox" name="interesses[]"
+                           value="filmes" checked
+                           id="filmes">
+                        <label for="filmes">Filmes</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" name="interesses[]"
+                           value="informatica"
+                           id="informatica">
+                        <label for="informatica">Informática</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" name="interesses[]"
+                           value="games"
+                           id="games">
+                        <label for="games">Games</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" name="interesses[]"
+                           value="livros"
+                           id="livros">
+                        <label for="livros">Livros</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" name="interesses[]"
+                           value="roupas"
+                           id="roupas">
+                        <label for="roupas">Roupas</label>
+                     </div>
+                  </fieldset>
+                  <div>
+                     <label for="infos">Informações
+                        Complementares:</label>
+                     <textarea name="infosInfosAdd" id="infos" cols="30"
+                        rows="10">
+                  Deixe aqui algo que vc deseja acrescentar a este forms...
+                  </textarea>
+                  </div>
+                  <div>
+                     <label for="anexos">Escolher sua imagem:</label>
+                     <input type="file" name="anexosInfosAdd" id="anexos"
+                        accept="image/*">
+                  </div>
+                  <div>
+                     <input type="hidden" name="invisivelInfosAdd"
+                        id="invisivel" value="enviado">
+                  </div>
+               </fieldset>
+               <button>Enviar</button>
+               <input type="reset" value="Limpar">
+            </form>
+         </main>
+         <footer>
+            <address>
+               Av. João Naves de Ávila, Santa Mônica, Uberlândia
+            </address>
+         </footer>
+      </body>
+   </html>
