@@ -1,0 +1,47 @@
+body{
+    background-color: darkgray;
+    margin: auto;
+    border: 0cap;
+    background-size: cover;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+header{
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+}
+li a{
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+}
+nav{
+    width: auto;
+    background-color: rgb(78, 78, 78);
+    position: sticky;
+    top: 0;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 1px;
+}
+main{
+    background-color: white;
+    margin-top: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid gray;
+    width: 70%;
+}
+:is(h1, h2){
+    color: rgb(78, 78, 78);
+}
+:is(p, h2){
+    margin: 35px;
+}
+footer{
+    text-align: center;
+}
