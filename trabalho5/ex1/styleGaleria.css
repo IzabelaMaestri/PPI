@@ -1,0 +1,92 @@
+body{
+    background-color: darkgray;
+    padding: auto;
+    margin: auto;
+    border: 0cap;
+    background-size: cover;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Arial, sans-serif;
+}
+header{
+    text-align: center;
+    background-color: rgb(78, 78, 78);
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 7.5px;
+    border-radius: 10px;
+}
+header h1{
+    color: white;
+}
+nav{
+    width: auto;
+    background-color: rgb(78, 78, 78);
+    position: sticky;
+    top: 0;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2.5px;
+    border-radius: 10px;
+}
+nav li{
+    display: inline-block;
+}
+li a{
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+}
+main{
+    background-color: white;
+    padding: auto;
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    width: 70%;
+    border-radius: 10px;
+}
+img{
+    display: inline-block;
+    width: auto;
+    background-color: black;
+    margin: 5px;
+    padding: 1px;
+    border-radius: 10px;
+}
+h2{
+    color: rgb(78, 78, 78);
+    margin-left: 15px;
+}
+footer{
+    background-color: rgb(78, 78, 78);
+    text-align: center;  
+    margin-top: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2.5px;
+    border-radius: 10px;
+}
+address{
+    padding: 16px;
+    color: white;
+}
+@media(max-width: 600px) {
+    body {
+        width: 95%;
+    }
+}
+.container{
+    box-shadow: 0 0 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+    border-radius: 20px;
+    
+}
