@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="description"
+         content=" Seja muito bem-vindo à SerenSaúde Integrativa, o seu refúgio ... ">
+      <title>Página Principal trabalho8</title>
+      <link rel="stylesheet" href="styleIndex.css">
+   </head>
+   <body>
+      <header>
+         <h1>Clínica SerenSaúde Integrativa</h1>
+      </header>
+      <nav>
+         <ul>
+            <li><button>Home</button></li>
+            <li><button>Galeria</button></li>
+            <li><button>Login</button></li>
+         </ul>
+      </nav>
+      <main>
+         <div class="tabs">
+            <section>
+               <div>
+                  <h2>Bem vindo à Clínica SerenSaúde</h2>
+               </div>
+               <p>
+                  Seja muito bem-vindo à SerenSaúde Integrativa, o seu refúgio
+                  dedicado à saúde holística e ao equilíbrio total. Aqui, unimos a
+                  expertise de profissionais comprometidos para oferecer a você
+                  uma jornada única em direção ao bem-estar físico, mental e
+                  emocional. Nossa equipe calorosa e dedicada está pronta para
+                  guiá-lo em cada passo, promovendo uma experiência de cuidado
+                  personalizado que transcende os limites tradicionais da
+                  medicina.
+               </p>
+               <h2>Nossa Missão</h2>
+               <p></p>
+               <p>
+                  Na SerenSaúde Integrativa, nossa missão é criar um ambiente onde
+                  a cura e a prevenção se entrelaçam. Buscamos ir além do
+                  tratamento de sintomas, concentrando-nos na causa raiz dos
+                  desafios de saúde para proporcionar soluções duradouras. Com a
+                  integração de abordagens inovadoras e práticas comprovadas,
+                  nossa clínica visa capacitar os indivíduos a atingir seu
+                  potencial máximo de saúde e felicidade.
+               </p>
+               <h2>Nossos Valores</h2>
+               <p></p>
+               <p>
+                  Nossos valores são a base do que fazemos. Na SerenSaúde
+                  Integrativa, valorizamos a empatia, a colaboração, a integridade
+                  e a sustentabilidade. Nosso compromisso com a compaixão e o
+                  respeito guia cada interação, enquanto a busca incessante por
+                  conhecimento e práticas inovadoras garante que permaneçamos à
+                  frente no fornecimento de cuidados de saúde abrangentes.
+                  Junte-se a nós nesta jornada de descoberta e transformação, onde
+                  sua saúde e serenidade são nossa prioridade.
+               </p>
+            </section>
+
+            <section>
+               <div>
+                  <h2>Nossa Estrutura</h2>
+               </div>
+               <table>
+                  <tr>
+                     <td><img src="images/med.png" alt="foto medicina"
+                           width="200" height="200"
+                           title="Foto representa a medicina integrativa presente na clínica"></td>
+                     <td><img src="images/acunputura.png" alt="foto acunputura"
+                           width="200" height="200"
+                           title="Foto representa a ténica de acunputura presente na clínica"></td>
+                     <td><img src="images/nutrição.png" alt="foto nutri"
+                           width="200" height="200"
+                           title="Foto representa a pratica de nutrição funcional presente na clínica"></td>
+                     <td><img src="images/terapiaHolistica.png"
+                           alt="foto holistica"
+                           width="200" height="200"
+                           title="Foto representa a pratica da terapia holística presente na clínica"></td>
+                  </tr>
+                  <tr>
+                     <td><img src="images/fisio.png" alt="foto fisio"
+                           width="200" height="200"
+                           title="Foto representa a pratica de fisioterapia integrativa na clínica"></td>
+                     <td><img src="images/psicoterapia.png" alt="foto psico"
+                           width="200" height="200"
+                           title="Foto representa a pratica de psi integrativa presente na clínica"></td>
+                     <td><img src="images/yoga.png" alt="foto yoga"
+                           width="200" height="200"
+                           title="Foto representa a pratica de yoga terapêutica presente na clínica"></td>
+                     <td><img src="images/gerenciamentoDeEstresse.png"
+                           alt="foto gerenciamento"
+                           width="200" height="200"
+                           title="Foto representa a pratica do programa de gerenciamentode estresse presente na clínica"></td>
+                  </tr>
+               </table>
+            </section>
+
+            <section>
+               <h2>Login</h2>
+
+               <form action="login.php" method="post">
+                  <div>
+                     <label for="usuario">Usuário:</label>
+                     <input type="text" id="usuario" name="loginUsuario" placeholder="exemplo@mail.com" autofocus>
+                  </div>
+                  <div>
+                     <label for="senha">Senha:</label>
+                     <input type="password" id="senha" name="loginSenha">
+                  </div>
+                  <div>
+                     <button type="submit">Entrar</button>
+                  </div>
+               </form>
+            </section>
+
+         </div>   
+      </main>
+      <footer>
+         <address>
+            Av. João Naves de Ávila, Santa Mônica, Uberlândia
+         </address>
+      </footer>
+
+      <script>
+         window.onload = function() { //carrega e executa a função anônima
+            const buttons = document.querySelectorAll("nav button"); //todos os botões de nav
+            for(let button of buttons) {
+               button.addEventListener("click", changeTab); //ao clicar em um botão executa a função changeTab
+            }
+
+            openTab(0); //abre a 1ª guia
+         }
+
+         function changeTab(e) { //função que é executada quando clicar em um botão
+            const botaoAdicionado = e.target; //identifica o botão
+            const botaoPai = botaoAdicionado.parentNode; //pega o elemento pai do botão
+            const nodes = Array.from(botaoPai.parentNode.children); //pega todos filhos do pai
+            const index = nodes.indexOf(botaoPai); //acha a posição do pai na lista do filho
+            openTab(index); //abre a guia correspondente ao botão clicado
+         }
+
+         function openTab(i) { //abre uma guia especifica
+            const tabActives = document.querySelectorAll(".tabActive"); //remove tabActive de todas as guias ativas
+            for(let tabActive of tabActives) {
+               tabActive.classList.remove("tabActive");
+            }
+
+            const buttonActives = document.querySelectorAll(".buttonActive"); //remove buttonActive de todos os botões ativos
+            for(let buttonActive of buttonActives) {
+               buttonActive.classList.remove("buttonActive");
+            }
+
+            document.querySelectorAll(".tabs section") [i].classList.add("tabActive"); //adiciona tabActive da guia
+            document.querySelectorAll("nav button") [i].classList.add("buttonActive"); //adiciona buttonActive ao botão
+         }
+      </script>
+   </body>
+</html>

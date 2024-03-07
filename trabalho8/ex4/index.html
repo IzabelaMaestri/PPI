@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex4 trabalho8</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <div class="loginBox">
+                <h3>Cadastro de Usuário</h3>
+
+                <form name="formCadastro" action="action.php" method="post">
+
+                    <div>
+                        <label for="usuario">Usuário:</label>
+                        <input type="text" id="usuario" name="usuario"
+                            autocomplete="off">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha">
+                        <span></span>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email"
+                            autocomplete="off">
+                        <span></span>
+                    </div>
+
+                    <button>Cadastrar</button>
+
+                </form>
+
+            </div>
+        </main>
+
+        <script>
+        window.onload = function (){ //carrega e executa a função anônima
+        document.forms.formCadastro.onsubmit = validaFormulario; //valida o formulario quando clicar em enviar
+        }
+
+        function validaFormulario(e){
+            let form = e.target; //acessa o objeto do formulario
+            let formularioValido = true; //validação inicialmente = true
+
+            const spanUsuario = form.usuario.nextElementSibling; //dentro do formulario, pega o proximo irmão do usuario = span
+            const spanSenha = form.senha.nextElementSibling; //dentro do formulario, pega o proximo irmão de senha = span
+            const spanEmail = form.email.nextElementSibling; //dentro do formulario, pega o proximo irmão do email = span
+
+            spanUsuario.textContent = ""; //string vazia no span do usuario
+            spanSenha.textContent = ""; //string vazia no span da senha
+            spanEmail.textContent = ""; //string vazia no span do email
+    
+            if (form.usuario.value == ""){  //campo usuario vazio
+                spanUsuario.textContent = 'O usuário deve ser preenchido'; //mensagem no span
+                formularioValido = false; //formularioValido = false, não enviar o formulario
+            }
+
+            if (form.senha.value == ""){ //campo senha vazio,
+                spanSenha.textContent = 'A senha deve ser preenchida'; //mensagem no span
+                formularioValido = false; //formularioValido = false, não enviar o formulario
+            }
+
+            if (form.email.value == ""){ //campo email vazio,
+            spanEmail.textContent = 'O e-mail deve ser preenchido'; //mensagem no span
+            formularioValido = false; //formularioValido = false, não enviar o formulario
+            }
+
+            return formularioValido; //formularioValido = true(formulario enviado) ou false(formulario não enviado)
+        }
+        </script>
+
+    </body>
+</html>

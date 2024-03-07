@@ -1,0 +1,129 @@
+body{
+    font-family: Arial, sans-serif;
+    color: #949090;
+    line-height: 1.5;
+    margin: 0;
+    background-color: darkgray;
+}
+
+header{
+    background-color: darkgray;
+    color: #292828;
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav{
+    background-color: rgb(78, 78, 78);
+    position: sticky;
+    top: 0;
+    width: auto;
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+    padding: 1px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav button{
+    border: none;
+    outline: none;
+    background-color: inherit;
+    color: azure;
+    padding: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+nav button:hover{
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button.buttonActive{
+    font-weight: bold;
+    background-color: darkgray;
+    padding: 10px;
+    color: rgb(78, 78, 78);
+}
+
+.tabs section {
+    display: none;
+}
+
+.tabs section.tabActive {
+    display: block;
+}
+
+main{
+    background-color: white;
+    border: 1px solid gray;
+    padding: 2em;
+    margin-top: 0%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+
+main h1, main h2, main h3{
+    font-size: 20px;
+}
+
+main p{
+    color: black;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table img{
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+form label{
+    display: block;
+    color: black;
+}
+
+form input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+form button{
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+footer{
+    color: black;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}

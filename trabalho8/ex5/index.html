@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ex5 trabalho8</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main>
+            <h1>A FACOM</h1>
+
+            <p>
+                A Faculdade de Computação (FACOM) da Universidade Federal de Ubelândia foi criada em 2000, a partir do extinto Departamento de Informática (DEINF), criado em 1988, no âmbito de CETEC.
+            </p>
+
+            <P>
+                No início dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação em Ciência da Computação.
+            </P>
+
+            <button type="button" id="btnOpenModal">Abrir Modal</button>
+            
+        </main>
+
+        <div id="modalTeste" class="modal">
+
+            <div class="modalContent">
+                <h2>Olá! Seja bem vindo!</h2>
+                <button class="buttonClose">OK</button>
+            </div>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContent', function(){ //carrega toda a arvore DOM
+
+                const modal = document.querySelector(".modal"); //guarda a constante referente a classe modal
+                const buttonClose = modal.querySelector(".buttonClose"); //guarda a constante referente a id buttonClose onde o botão ira fechar a janela
+
+                buttonClose.addEventListener("click", function(){ //clique no botão para fechar
+                    modal.style.display = 'none'; //conteudo modal = nenhum e some da tela
+                });
+
+                const buttonOpenModal = document.getElementById("btnOpenModal"); //guarda a constante referente a id btnOpenModal onde o botão ira abrir a janela
+                buttonOpenModal.addEventListener("click", function (){ //clique no botão para abrir
+                    modal.style.display = 'block'; //conteudo modal = bloco e aparece na tela
+                })
+            })
+        </script>
+
+    </body>
+</html>
