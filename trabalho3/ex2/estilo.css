@@ -1,0 +1,75 @@
+body {
+    background-color: white;
+    line-height: 1.5;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+header {
+    background-color: antiquewhite;
+}
+
+nav {
+    background-color: rgba(250, 235, 215, 0.899);
+}
+
+main {
+    background-color: rgba(250, 235, 215, 0.685);
+}
+
+footer {
+    background-color: rgba(250, 235, 215, 0.685);
+}
+
+input:invalid+span::after {
+    content: 'x';
+    color: red;
+}
+
+input:valid+span::after {
+    content: 'v';
+    color: limegreen;
+}
+
+#cantoE {
+    text-align: end;
+    color: rgb(153, 91, 15);
+}
+
+.subT {
+    text-align: right;
+    text-transform: uppercase;
+}
+
+main h2 {
+    background-color: rgb(243, 219, 188);
+}
+
+h2+table {
+    background-color: black;
+}
+
+a:link {
+    color: blueviolet;
+}
+
+a:visited {
+    color: darkblue;
+}
+
+fieldset:has( div) {
+    background-color: lavenderblush;
+}
+
+:is(h1, h2) {
+    color: #964b00;
+}
+
+li:first-child {
+    text-transform: uppercase;
+}
+
+p:first-of-type {
+    color: brown;
+}
